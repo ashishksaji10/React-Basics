@@ -1,19 +1,28 @@
 import React from "react"
 import ReactDOM from 'react-dom/client'
 
-const parent = React.createElement('div',{id: 'parent'}, 
-    [React.createElement('div',{id: 'child'}, [
-        React.createElement('h1',{}, 'This is React Tutorial'),
-        React.createElement('h2',{}, 'This is H1 Tag')
-    ]),
-    React.createElement('div',{id: 'child'}, [
-            React.createElement('h1',{}, 'This is H1 Tag'),
-            React.createElement('h2',{}, 'This is H1 Tag')
-        ])
-    ])
+// React Components
 
-// const heading = React.createElement("h1",{},"Hello React")
+
+
+const Title = ({props}) => (
+    <h1 className="Head">
+        {props}
+    </h1>
+);
+    
+
+
+const Heading = () => {
+    return (<div>
+        <Title props='Hello'/>
+        <h1>Hello Ashish</h1>
+    </div>)
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(parent)
+const heading = <h1 id="hello" className="Head">Hello Ashish</h1>
+
+root.render(<Heading />)
