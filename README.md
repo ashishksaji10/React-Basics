@@ -19,3 +19,9 @@
 - HTTPs
 - Tree Shaking - remove unused Code
 - Different dev and prod bundles
+
+
+# Hooks
+
+- useState()
+- useEffect()
